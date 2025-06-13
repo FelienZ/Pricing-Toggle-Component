@@ -1,0 +1,154 @@
+:root{
+--Linear-Gradient: hsl(236, 72%, 79%);
+--Linear-Gradient2: hsl(237, 63%, 64%);
+
+--Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+--Light-Grayish-Blue: hsl(234, 14%, 74%);
+--Grayish-Blue: hsl(233, 13%, 49%);
+--Dark-Grayish-Blue: hsl(232, 13%, 33%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat';
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    font-size: 15px;
+}
+.container{
+    margin: auto;
+    max-width: 800px;
+    padding: 30px;
+    text-align: center;
+    background-color: hsl(240, 100%, 96%);
+    display: grid;
+    grid-template-areas: 'head head head'
+    'card1 card2 card3'
+    'card1 card2 card3';
+}
+header{
+    grid-area: head;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+header .content{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 0.8em;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    color: var(--Light-Grayish-Blue);
+}
+header .strong{
+    font-weight: 700;
+    font-size: 1.2em;
+    color: var(--Dark-Grayish-Blue);
+}
+.content .toggler{
+    background: linear-gradient(45deg, var(--Linear-Gradient), var(--Linear-Gradient2));
+    width: 60px;
+    height: 30px;
+    display: grid;
+    align-items: center;
+    transition: 1s all;
+    border-radius: 99px;
+}
+.price-active{
+    display: block;
+    font-size: 3em;
+}
+.price{
+    display: none;
+}
+.content .toggler .dot{
+    margin: 0 5px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    border-radius: 99px;
+    background-color: var(--Very-Light-Grayish-Blue);
+}
+.dot-active{
+    transform: translateX(25px);
+}
+.card{
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 1px 1px rgba(0,0,0,0.5);
+}
+.card .content{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 700;
+    font-size: 0.6em;
+}
+hr{
+    border: 1px solid var(--Light-Grayish-Blue);
+    opacity: 0.5;
+}
+.card button{
+    background: linear-gradient(45deg, var(--Linear-Gradient), var(--Linear-Gradient2));
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 8px 20px;
+    font-weight: 700;
+    color: var(--Very-Light-Grayish-Blue);
+}
+.card button:hover{
+    background: transparent;
+    border: 1px solid var(--Linear-Gradient2);
+    color: var(--Linear-Gradient2);
+}
+.card .price{
+    font-size: 3em;
+}
+.card-1{
+    grid-area: card1;
+    background-color: var(--Very-Light-Grayish-Blue);
+}
+.card-2{
+    grid-area: card2;
+    background:linear-gradient(45deg,var(--Linear-Gradient), var(--Linear-Gradient2));
+    transform: scale(1.1);
+    color: var(--Very-Light-Grayish-Blue);
+}
+.card.card-2 button{
+    color: var(--Linear-Gradient2);
+    background: var(--Very-Light-Grayish-Blue);
+}
+.card.card-2 button:hover{
+    color: var(--Very-Light-Grayish-Blue);
+    border: 1px solid var(--Very-Light-Grayish-Blue);
+    background: transparent;
+}
+.card-2 hr{
+    border: 1px solid var(--Very-Light-Grayish-Blue);
+}
+.card-3{
+    grid-area: card3;
+    background-color: var(--Very-Light-Grayish-Blue);
+}
+@media screen and (max-width:600px) {
+    .container{
+        grid-template-areas: 'head' 'card1' 'card2' 'card3';
+        grid-template-rows: minmax(300px, 1fr);
+    }
+    header{
+        grid-area: head;
+        display: flex;
+        gap: 5px;
+        justify-content: flex-end;
+    }
+}
