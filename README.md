@@ -1,10 +1,7 @@
-
 # Pricing Toggle Component
 
-A simple responsive pricing section with a toggle to switch between annual and monthly plans. Built using HTML, CSS, and a bit of JavaScript.
+A responsive pricing section with a toggle between annual and monthly plans. Built using HTML, CSS, and JavaScript.
 
-Live preview: [[Check](https://felienz.github.io/Pricing-Toggle-Component/)]
+Live preview: https://FelienZ.github.io/Pricing-Toggle-Component/
 
-Based on a challenge from Frontend Mentor.
-[Pricing Component with Toggle](https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC)
-
+Based on a challenge from Frontend Mentor: [Pricing Component with Toggle](https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC)
